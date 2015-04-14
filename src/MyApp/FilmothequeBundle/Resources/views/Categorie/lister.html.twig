@@ -1,0 +1,15 @@
+<h1>Liste des catégories</h1>
+
+<table>
+    {% for c in categories %}
+        <tr>
+            <td>{{ c.nom }}</td>
+            <td><a href="{{ path('myapp_categorie_modifier', { 'id': c.id }) }}">Modifier</a></td>
+            <td><a href="{{ path('myapp_categorie_supprimer', { 'id': c.id }) }}">Supprimer</a></td>
+        </tr>
+    {% else %}
+        <tr><td>Aucune catégorie n'a été trouvé.</td></tr>
+    {% endfor %}
+</table>
+
+<p><a href="{{ path('myapp_categorie_ajouter') }}">Ajouter une catégorie</a><p>

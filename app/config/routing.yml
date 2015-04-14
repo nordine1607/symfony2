@@ -1,0 +1,7 @@
+my_app_filmotheque:
+    resource: "@MyAppFilmothequeBundle/Resources/config/routing.yml"
+    prefix:   /myapp
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
